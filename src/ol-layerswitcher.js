@@ -1,0 +1,1 @@
+if (LayerSwitcher.isTouchDevice_()) {
