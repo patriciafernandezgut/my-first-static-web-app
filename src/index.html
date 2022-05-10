@@ -134,6 +134,15 @@ var divisiones = L.tileLayer.wms("http://geoserveis.icgc.cat/servei/catalunya/di
 	   attribution: " WMS DIVISIONES ADMINISTRATIVAS"
 })
 
+var info_geo = L.tileLayer.wms("https://geoserveis.ide.cat/servei/catalunya/inspire-serveis-utilitat-publica/wms?", {
+	   layers: "divisions_administratives_comarques_1000000",//nombre de la capa (ver get capabilities)
+	   format: 'image/png',
+	   transparent: true,
+	   version: '1.3.0',//wms version (ver get capabilities)
+	   attribution: " WMS INFORMAION GEOGRAFICA"
+})
+
+
 
 var orto_infraroja = L.tileLayer.wms("https://geoserveis.icgc.cat/icc_mapesbase/wms/service?", {
 	   layers: "ortoi25m",//nombre de la capa (ver get capabilities)
@@ -245,6 +254,7 @@ var orto_color = L.tileLayer.wms("http://geoserveis.icgc.cat/servei/catalunya/or
 const bases ={
     "DIVISIONES":divisiones,
     "INFRAROJO":orto_infraroja,
+    "INFORMACION GEOGRAFICA":info_geo,
     "GEOLOGIA":Geologia,
     "NATURA2000":natura2000,
     "EDIFICIOS":edificios,
