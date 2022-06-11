@@ -109,7 +109,7 @@ position: relative;
     
     
     <div class="title">VISOR TINKERERS</div>
-    <div class="logo"><a href="./index copy.html" > <img src="./3d_viewer_logo.png" height="50px"></a></div>
+    <div class="logo"><a href="./index copy.html" > <img src="./3d_viewer_logo.png" style="height: 6vh;"></a></div>
     <script src="http://lab.digital-democracy.org/leaflet-side-by-side/leaflet-side-by-side.js"></script>
 	
     <script src="https://unpkg.com/ol-layerswitcher@3.0.0"></script>
@@ -243,27 +243,14 @@ var ndvi= L.tileLayer.wms("http://geoserveis.icgc.cat/servei/catalunya/ndvi/wms?
 	})
 
 //capa stamenLayer
-var orto_color = L.tileLayer.wms("https://servicios.idee.es/wms-inspire/mdt", {
-	   layers: "ortofoto_color_2020",//nombre de la capa (ver get capabilities)
+var orto_color = L.tileLayer.wms("https://geoserveis.icgc.cat/servei/catalunya/orto-territorial/wms?service=wms&request=getcapabilities", {
+	   layers: "ortofoto_color_2021",//nombre de la capa (ver get capabilities)
 	   format: 'image/jpeg',
 	   transparent: true,
 	   version: '1.3.0',//wms version (ver get capabilities)
 	   attribution: " WMS ORTOFOTOS Cedido por © ICGC"
 	})
  
-
-/*L.control.sideBySide(layer1, layer2).addTo(map);*/
-
-/*crear una capa Geotiff
-
-const MDE =  L.tileLayer.leafletGeotiff(
-    'C:/Users/Patri/Desktop/practicas_HaToM/ej_3_Leaflet/DEM_CATALUÑA.tif',
- 
-	
-
-
-
-).addTo(map);*/
 		
 const bases ={
     "DIVISIONES":divisiones,
